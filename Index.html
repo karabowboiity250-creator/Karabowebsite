@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karabos Scent | Cologne E-Commerce</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f7f3ee;color:#241c18}
+header{background:#1c1411;color:#fff;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+.logo{font-size:26px;font-weight:800;letter-spacing:1px}.logo span{color:#d7a85d}
+nav a{color:#fff;text-decoration:none;margin-left:22px;font-size:14px}
+.hero{padding:80px 7%;background:linear-gradient(110deg,#211612,#5b3a25);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.hero h1{font-size:52px;max-width:600px;margin-bottom:18px}.hero p{font-size:18px;line-height:1.6;max-width:550px;color:#eee}
+.btn{display:inline-block;margin-top:25px;padding:13px 22px;background:#d7a85d;color:#1c1411;text-decoration:none;border-radius:6px;font-weight:bold}
+section{padding:55px 7%}h2{text-align:center;font-size:32px;margin-bottom:30px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px}
+.card{background:#fff;border-radius:12px;padding:20px;text-align:center;box-shadow:0 5px 18px #0001}
+.bottle{height:190px;border-radius:10px;background:linear-gradient(135deg,#17120f,#a87537);display:flex;align-items:center;justify-content:center;color:#fff;font-size:25px;font-weight:bold;margin-bottom:18px}
+.card h3{margin-bottom:8px}.price{font-weight:bold;color:#9a6725;font-size:19px}
+.card button{margin-top:14px;padding:10px 18px;border:0;border-radius:5px;background:#241c18;color:#fff;cursor:pointer}
+.about{background:#fff;text-align:center;line-height:1.7}.contact{text-align:center;background:#211612;color:#fff}.contact p{margin:10px}
+footer{text-align:center;padding:20px;background:#120e0c;color:#ddd;font-size:13px}
+@media(max-width:650px){header{flex-direction:column;gap:12px}.hero{padding:55px 7%}.hero h1{font-size:38px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">KARABOS <span>SCENT</span></div>
+  <nav><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Find Your Signature Scent.</h1>
+    <p>Discover fragrances made to leave a lasting impression. Welcome to Karabos Scent — your destination for stylish, memorable colognes.</p>
+    <a class="btn" href="#shop">Shop Colognes</a>
+  </div>
+</section>
+
+<section id="shop">
+  <h2>Featured Colognes</h2>
+  <div class="products">
+    <div class="card"><div class="bottle">KS 01</div><h3>Karabos Classic</h3><p>Fresh • Elegant • Timeless</p><p class="price">R299</p><button onclick="order('Karabos Classic')">Order Now</button></div>
+    <div class="card"><div class="bottle">KS 02</div><h3>Karabos Intense</h3><p>Bold • Warm • Confident</p><p class="price">R349</p><button onclick="order('Karabos Intense')">Order Now</button></div>
+    <div class="card"><div class="bottle">KS 03</div><h3>Karabos Fresh</h3><p>Clean • Bright • Energetic</p><p class="price">R299</p><button onclick="order('Karabos Fresh')">Order Now</button></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>About Karabos Scent</h2>
+  <p>Karabos Scent is a fragrance brand focused on helping you smell confident and unforgettable. Explore our collection and choose a scent that matches your personality.</p>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Get In Touch</h2>
+  <p><strong>Phone:</strong> 073 560 2476</p>
+  <p><strong>Address:</strong> 567 Block P</p>
+  <a class="btn" href="tel:0735602476">Call Karabos Scent</a>
+</section>
+
+<footer>© 2026 Karabos Scent. All rights reserved.</footer>
+
+<script>
+function order(product){
+  const message = encodeURIComponent("Hi Karabos Scent, I would like to order: " + product);
+  window.location.href = "https://wa.me/27735602476?text=" + message;
+}
+</script>
+</body>
+</html>
